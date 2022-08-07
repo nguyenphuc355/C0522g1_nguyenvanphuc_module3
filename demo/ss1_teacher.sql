@@ -1,0 +1,1 @@
+SELECT * FROM teacher.new_table;
