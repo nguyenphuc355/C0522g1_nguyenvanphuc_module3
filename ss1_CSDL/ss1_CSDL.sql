@@ -1,0 +1,1 @@
+SELECT * FROM student_managerment.new_table;

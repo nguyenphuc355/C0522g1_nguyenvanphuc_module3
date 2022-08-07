@@ -1,0 +1,1 @@
+SELECT * FROM class.new_table;
