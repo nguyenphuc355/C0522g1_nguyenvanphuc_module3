@@ -1,1 +1,1 @@
-SELECT * FROM teacher.persons;
+SELECT * FROM teacher.new_table;
