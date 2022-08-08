@@ -1,1 +1,0 @@
-SELECT * FROM my_database1.teacher;
