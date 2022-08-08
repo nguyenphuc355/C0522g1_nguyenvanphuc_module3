@@ -1,1 +1,1 @@
-SELECT * FROM class.new_table;
+SELECT * FROM my_database1.class;
