@@ -65,7 +65,8 @@ values
 (10,'Nguyễn Công Đạo',1994-01-08,'755434343',8000000,'0988767111','nguyencongdao@gmail.com','6 Khánh Hòa, Đồng Nai',2,3,2);
 
 select * from casestudy_database.nhan_vien;
-select * from nhan_vien where ho_ten like '%T%';
+select ma_nhan_vien,ho_ten from nhan_vien where ho_ten like 'T%' or ho_ten like 'H%' or ho_ten like 'K%' and (length(ho_ten)<= 15 );
+
 
 create table loai_khach(
 ma_loai_khach int primary key,
@@ -106,10 +107,15 @@ values
 
 select * from khach_hang;
 
+select ma_khach_hang, ho_ten from khach_hang where(
+ dia_chi like '%Quang tri' or dia_chi like '%Da Nang'
+and (round(datediff(curdate(),ngay_sinh)/365,0)<=50
+ and (round(datediff(curdate(),ngay_sinh)/365,0)>=18)));
+
 create table kieu_thue(
 ma_kieu_thue int primary key,
 ten_kieu_thue varchar(45)
-);
+);	
 
 insert into kieu_thue
 values 
