@@ -12,7 +12,7 @@ create table `order`(
 o_id int primary key,
 c_id int,
 o_date date not null,
-total_price double not null,
+total_price double ,
 foreign key (c_id) references customer(c_id)
 );
 

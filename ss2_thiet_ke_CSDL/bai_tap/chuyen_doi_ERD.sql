@@ -65,10 +65,3 @@ primary key(so_pn,ma_vt),
 foreign key(so_pn) references phieu_nhap(so_pn),
 foreign key(ma_vt) references vat_tu(ma_vt)
 );
-
-
-
-
-
-
-
