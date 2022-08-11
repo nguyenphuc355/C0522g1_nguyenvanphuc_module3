@@ -50,8 +50,9 @@ join product on product.p_id =orderdetail.p_id;
 
 select customer.c_id,customer.c_name
 from customer
-where customer.c_id not in
-(  select customer.c_id
+where customer.c_id 
+not in
+(select customer.c_id
 from customer
 join `order` on customer.c_id = `order`.c_id
 join orderdetail on orderdetail.o_id = `order`.o_id
