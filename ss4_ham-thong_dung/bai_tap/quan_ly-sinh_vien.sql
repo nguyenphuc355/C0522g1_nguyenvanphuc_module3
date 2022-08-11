@@ -11,12 +11,6 @@ where credit = (select max(credit) from  `subject`);
  
  -- Hiển thị các thông tin sinh viên và điểm trung bình của mỗi sinh viên, xếp hạng theo thứ tự điểm giảm dần
  
-select student.student_name,mark.mark
-from student 
-join mark on student.student_id = mark.student_id;
--- group by student.student_id;
-
-
 select student.student_id,student.student_name,avg(mark) as `avg` 
 from mark 
 join student on student.student_id = mark.student_id
