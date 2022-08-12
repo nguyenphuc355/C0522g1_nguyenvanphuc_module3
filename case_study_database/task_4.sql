@@ -38,8 +38,7 @@ select khach_hang.ma_khach_hang,
  left join dich_vu on dich_vu.ma_dich_vu = hop_dong.ma_dich_vu
  left join hop_dong_chi_tiet on hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
  left join dich_vu_di_kem on dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
-  group by ma_hop_dong
-  order by ma_khach_hang, ma_hop_dong desc; 
+order by ma_khach_hang, ma_hop_dong desc; 
   
 
 

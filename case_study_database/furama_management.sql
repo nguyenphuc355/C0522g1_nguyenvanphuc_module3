@@ -1,3 +1,4 @@
+drop database if exists caseStudy_database;
 create database caseStudy_database;
 use caseStudy_database;
 create table vi_tri(
@@ -49,22 +50,26 @@ FOREIGN key  (ma_vi_tri) REFERENCES vi_tri (ma_vi_tri),
 FOREIGN KEY (ma_trinh_do) REFERENCES trinh_do(ma_trinh_do),
 FOREIGN KEY (ma_bo_phan) REFERENCES bo_phan(ma_bo_phan)
 );
+
+ALTER TABLE nhan_vien
+  ADD tinh_trang_lam_viec bit;
+  
 insert into nhan_vien
 values
 (1,'Nguyễn Văn An','1970-11-07','456231786','10000000','0901234121','annguyen@gmail.com','295 Nguyễn Tất Thành,Đà Nẵng',1,3,1);
 insert into nhan_vien
 values
-(2,'Lê Văn Bình',1997-04-09,'654231234',7000000,'0934212314','binhlv@gmail.com','22 Yên Bái,Đà Nẵng',1,2,2),
-(3,'Hồ Thị Yến',1995-12-12,'999231723',14000000,'0412352315','thiyen@gmail.com','k234/Điện Biên Phủ, Gia Lai',1,3,2),
-(4,'Võ công Toản',1980-04-04,'123231365',17000000,'0374443232','toan0404@gmail.com','77 Hoàng Diệu, Quảng trị',1,4,4),
-(5,'Nguyễn Bỉnh Phát',1999-12-09,'454363232',6000000,'0902341231','phatphat@gmail.com','43 Yên Bái,Đà Nẵng',2,1,1),
-(6,'KHúc Nguyễn An Nghi',2000-11-08,'0902341231',7000000,'0902341231','annghi@gmail.com','294 Nguyễn Tất Thành Đà Nẵng',2,2,3),
-(7,'Nguyễn Hữu Hà',1993-01-01,'534323231',8000000,'0941234553','nhh0101@gmail.com','4 Nguyễn Chí Thanh, Huế',2,3,2),
-(8,'Nguyễn Hà Đông',1989-09-03,'234414123',9000000,'0642123111','donghanguyen@gmail.com','111 Hùng Vương, Hà Nội',2,4,4),
-(9,'Tòng Hoang',1982-09-03,'256781231',6000000,'0245144444','hoangtong@gmail.com','213 Hàm Nghi, Đà Nẵng',2,4,4),
-(10,'Nguyễn Công Đạo',1994-01-08,'755434343',8000000,'0988767111','nguyencongdao@gmail.com','6 Khánh Hòa, Đồng Nai',2,3,2);
+(2,'Lê Văn Bình','1997-04-09','654231234',7000000,'0934212314','binhlv@gmail.com','22 Yên Bái,Đà Nẵng',1,2,2),
+(3,'Hồ Thị Yến','1995-12-12','999231723',14000000,'0412352315','thiyen@gmail.com','k234/Điện Biên Phủ, Gia Lai',1,3,2),
+(4,'Võ công Toản','1980-04-04','123231365',17000000,'0374443232','toan0404@gmail.com','77 Hoàng Diệu, Quảng trị',1,4,4),
+(5,'Nguyễn Bỉnh Phát','1999-12-09','454363232',6000000,'0902341231','phatphat@gmail.com','43 Yên Bái,Đà Nẵng',2,1,1),
+(6,'KHúc Nguyễn An Nghi','2000-11-08','0902341231',7000000,'0902341231','annghi@gmail.com','294 Nguyễn Tất Thành Đà Nẵng',2,2,3),
+(7,'Nguyễn Hữu Hà','1993-01-01','534323231',8000000,'0941234553','nhh0101@gmail.com','4 Nguyễn Chí Thanh, Huế',2,3,2),
+(8,'Nguyễn Hà Đông','1989-09-03','234414123',9000000,'0642123111','donghanguyen@gmail.com','111 Hùng Vương, Hà Nội',2,4,4),
+(9,'Tòng Hoang','1982-09-03','256781231',6000000,'0245144444','hoangtong@gmail.com','213 Hàm Nghi, Đà Nẵng',2,4,4),
+(10,'Nguyễn Công Đạo','1994-01-08','755434343',8000000,'0988767111','nguyencongdao@gmail.com','6 Khánh Hòa, Đồng Nai',2,3,2);
 
-select * from casestudy_database.nhan_vien;
+select * from nhan_vien;
 
 create table loai_khach(
 ma_loai_khach int primary key,
@@ -150,7 +155,7 @@ tieu_chuan_phong, mo_ta_tien_nghi_khac, dien_tich_ho_boi, so_tang, dich_vu_mien_
 values
 (1,'Villa Beach Front',25000,1000000,10,3,1,'vip','có hồ bơi',500,4,null),
 (2,'House Princess 01',14000,5000000,7,2,2,'vip','có thêm bếp nướng',null,3,null),
-(3,'Room Twin 01',5000,10000000,2,4,3,'normal','có tivi',null,null,'1 xe máy,1 xe đạp'),
+(3,'Room Twin 01',5000,1000000,2,4,3,'normal','có tivi',null,null,'1 xe máy,1 xe đạp'),
 (4,'Villa No Beach Front',22000,9000000,8,3,1,'normal','có hồ bơi',300,3,null),
 (5,'House Princess 02',10000,4000000,5,3,2,'normal','có thêm bếp nướng',null,2,null),
 (6,'Room Twin 02',3000,900000,2,4,3,'normal','Có tivi',null,null,'1 Xe máy');
