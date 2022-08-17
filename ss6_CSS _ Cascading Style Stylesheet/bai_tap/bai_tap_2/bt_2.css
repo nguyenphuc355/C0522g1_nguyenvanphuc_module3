@@ -1,6 +1,7 @@
 
-body {
-    background: #fffcfc;
+#top ,.wrapper{
+    margin: 0 auto;
+    width: 980px;
 }
 
 a {
@@ -14,4 +15,8 @@ a {
 
 #element1 {
     text-indent: 30px;
+}
+
+#line1 {
+    margin-block-start: 0px;
 }
