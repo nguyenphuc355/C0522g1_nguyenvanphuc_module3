@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #menu {
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            background: #000000;
+            border: 1px solid #CCDDCC;
+        }
+
+        #menu ul, #menu li {
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li {
+            float: left;
+            list-style: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu li a {
+            width: 100px;
+            height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            background: black;
+            color: #fffcfc;
+        }
+
+        #menu ul ul li a {
+            width: 200px;
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        #menu li a:hover {
+            background-color: red;
+        }
+
+        #menu ul ul {
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            visibility: hidden;
+        }
+
+        #menu ul li:hover ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li><a href="#">sem1</a>
+            <ul>
+                <li><a href="https://mail.google.com/mail/u/0/#inbox">1</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">1</a></li>
+            </ul>
+        </li>
+        <li><a href="#">sem2</a>
+            <ul>
+                <li><a href="#">a</a></li>
+                <li><a href="#">b</a></li>
+                <li><a href="#">c</a></li>
+                <li><a href="#">d</a></li>
+                <li><a href="#">e</a></li>
+                <li><a href="#">f</a></li>
+            </ul>
+        <li><a href="#">sem2</a>
+            <ul>
+                <li><a href="#">a</a></li>
+                <li><a href="#">b</a></li>
+                <li><a href="#">c</a></li>
+                <li><a href="#">d</a></li>
+                <li><a href="#">e</a></li>
+                <li><a href="#">f</a></li>
+            </ul>
+        <li><a href="#">sem2</a>
+            <ul>
+                <li><a href="#">a</a></li>
+                <li><a href="#">b</a></li>
+                <li><a href="#">c</a></li>
+                <li><a href="#">d</a></li>
+                <li><a href="#">e</a></li>
+                <li><a href="#">f</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
