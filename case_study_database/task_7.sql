@@ -8,24 +8,29 @@ left join hop_dong on nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
 where  hop_dong.ma_hop_dong  is null; 
 
 SET SQL_SAFE_UPDATES = 0;
+
 update nhan_vien
 set nhan_vien.tinh_trang_lam_viec = 0
-where nhan_vien.ma_nhan_vien not in
+where nhan_vien.ma_nhan_vien not in  
 (
 select ma_nhan_vien
 from hop_dong
 where year(hop_dong.ngay_lam_hop_dong) in (2019, 2021)
 group by ma_nhan_vien
 );
+-- delete from nhan_vien
+-- where tinh_trang_lam_viec = 0;
 
-select* from nhan_vien;
+select nhan_vien.ma_nhan_vien, nhan_vien.ho_ten as ten_nhan_vien, hop_dong.ma_hop_dong
+from nhan_vien
+left join hop_dong on nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
+where tinh_trang_lam_viec = 0;
 
 -- and (year(hop_dong.ngay_lam_hop_dong) between 2019 and 2021);
 
 
 -- 17.	Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond,
---  chỉ cập nhật những khách hàng đã từng đặt phòng
---  với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
+--  chỉ cập nhật những khách hàng đã từng đặt phòng với Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
 
 select khach_hang.ma_khach_hang,
 khach_hang.ho_ten,
@@ -64,7 +69,8 @@ from dich_vu_di_kem join hop_dong_chi_tiet
 on dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
 join hop_dong on hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
 where year(hop_dong.ngay_lam_hop_dong) = 2020
-and hop_dong_chi_tiet.so_luong > 10;
+group by dich_vu_di_kem.ma_dich_vu_di_kem
+having sum(hop_dong_chi_tiet.so_luong) > 10;
 
 
 -- 20.	Hiển thị thông tin của tất cả các nhân viên và khách hàng có trong hệ thống,

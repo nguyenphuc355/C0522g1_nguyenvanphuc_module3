@@ -67,13 +67,8 @@ dich_vu_di_kem
 join hop_dong_chi_tiet
 on dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
 group by hop_dong_chi_tiet.ma_dich_vu_di_kem
-having so_luong_dich_vu_di_kem =(SELECT
-        SUM(so_luong) AS so_luong_dich_vu_di_kem
-    FROM
-        hop_dong_chi_tiet
-    GROUP BY ma_dich_vu_di_kem
-    ORDER BY so_luong DESC limit 1
-   );
+having so_luong_dich_vu_di_kem =(SELECT max(so_luong)
+from hop_dong_chi_tiet);
    
    
 -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất.

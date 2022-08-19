@@ -178,7 +178,6 @@ values
 (4,'Buffet buổi sáng',15000,'suất','đầy đủ đồ ăn, tráng miệng'),
 (5,'Buffet buổi trưa',90000,'suất','đầy đủ đồ ăn, tráng miệng'),
 (6,'Buffet buổi tối',16000,'suất','đầy đủ đồ ăn, tráng miệng');
-
 select * from dich_vu_di_kem;
 
 create table hop_dong(
@@ -193,6 +192,10 @@ foreign key (ma_nhan_vien) references nhan_vien(ma_nhan_vien),
 foreign key (ma_khach_hang) references khach_hang(ma_khach_hang),
 foreign key (ma_dich_vu) references dich_vu(ma_dich_vu)
 );
+
+ALTER TABLE hop_dong
+  ADD is_delete bit default 1;
+  
 
 insert into hop_dong
 values

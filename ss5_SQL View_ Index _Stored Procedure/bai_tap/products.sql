@@ -40,6 +40,7 @@ drop index i_product  on products;
  select * from w_product;
  
  -- Tiến hành sửa đổi view
+ SET SQL_SAFE_UPDATES = 0;
  update w_product 
  set product_code =1
  where product_name = 'phone';
