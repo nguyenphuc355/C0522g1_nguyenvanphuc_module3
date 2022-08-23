@@ -1,0 +1,13 @@
+form{
+    display: inline;
+    border: #22ff00 solid;
+    height: 300px;
+    width: 300px;
+    background: bisque;
+}
+label:hover{
+    background: red;
+}
+input:hover{
+    background: aqua;
+}
