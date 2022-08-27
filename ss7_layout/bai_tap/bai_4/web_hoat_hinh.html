@@ -30,59 +30,86 @@
             list-style: none;
 
         }
+
         .row ul ul {
             position: absolute;
             top: 30px;
             left: 15px;
             visibility: hidden;
         }
-        .row ul li a{
+
+        .row ul li a {
             text-decoration: none;
         }
 
 
-        .col-2 {width: 16.66%;}
-        .col-3 {width: 25%;}
-
-        .col-6 {width: 50%;}
-
-        .col-10 {width: 83.33%;}
-
-        .row ul a:hover{
-            background-color: red;
+        .col-2 {
+            width: 16.66%;
         }
 
-        h3:hover{
-            background-color:red ;
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .row ul a:hover {
+            color: red;
+        }
+
+        h3:hover {
+            color: red;
+        }
+
+        /*.menu{*/
+        /*    position: fixed;*/
+        /*    background-color: #f0f2f5;*/
+        /*    width: 100%;*/
+        /*}*/
+        .left:hover {
+            overflow: scroll;
+            height: 700px;
+        }
+        .left{
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
-<header>
-    <div class="col-6" style="float: left">
-        <img src="../picture/14.jpg" height="130" width="300"/>
-    </div>
-    <div class="col-6">
-        <h2>Animehay.com</h2>
-    </div>
-</header>
+<div class="menu">
+    <header>
+        <div class="col-6" style="float: left">
+            <img src="../picture/14.jpg" height="130" width="300"/>
+        </div>
+        <div class="col-6">
+            <h2>Animehay.com</h2>
+        </div>
+    </header>
+
+</div>
 <nav class="row" style=" height: 50px;">
     <div class="col-3"></div>
     <div class="col-6">
     <ul>
-        <li style="float: left;border-right-style:solid"><a href="#">Phim hoạt Hình</a>
+        <li style="float: left;border-right-style:solid;color: #08e3e3"><a href="#">Phim hoạt Hình</a>
             <ul>
                 <li>
                 </li>
             </ul>
         </li>
-        <li style="float: left;border-right-style:solid"><a href="#">Phim hoạt hình yêu thích</a>
+        <li style="float: left;border-right-style:solid;color: #08e3e3"><a href="#">Phim hoạt hình yêu thích</a>
             <ul>
                 <li>
                 </li>
             </ul>
         </li>
-        <li style="float: left;border-right-style:solid"><a href="#">Nhân vật hoạt hình</a>
+        <li style="float: left;border-right-style:solid;color: #08e3e3"><a href="#">Nhân vật hoạt hình</a>
             <ul>
                 <li>
                 </li>
@@ -98,56 +125,66 @@
     </div>
     <div class="col-3"></div>
 </nav>
-<article class="row">
+<article class="row" style="height: auto">
 
-    <div class="col-2">
+    <div class="col-2 left">
         <div class="row1">
-            <img style="width: 80%" src="../picture/9.jpg" height="168" width="300"/>
+            <img style="width: 90%" src="../picture/9.jpg" height="168" width="300"/>
         </div>
         <h3 style="margin-top: 0px">Tập-1 Thế Giới Hoàn Mỹ</h3>
 
         <div class="row1">
-            <img style="width: 80%" src="../picture/10.jpg" height="168" width="300"/>
+            <img style="width: 90%" src="../picture/10.jpg" height="168" width="300"/>
         </div>
         <h3 style="margin-top: 0px">Tập-2 Thế Giới Hoàn Mỹ</h3>
 
         <div class="row1">
-            <img style="width: 80%" src="../picture/11.jpg" height="168" width="299"/>
+            <img style="width: 90%" src="../picture/11.jpg" height="168" width="299"/>
         </div>
         <h3 style="margin-top: 0px">Tập-3 Thế Giới Hoàn Mỹ</h3>
 
         <div class="row1">
-            <img style="width: 80%" src="../picture/12.jpg" height="146" width="344"/>
+            <img style="width: 90%" src="../picture/12.jpg" height="146" width="344"/>
         </div>
-        <h3style="margin-top: 0px">Tập-4 Thế Giới Hoàn Mỹ</h2>
+        <h3 style="margin-top: 0px">Tập-4 Thế Giới Hoàn Mỹ</h3>
     </div>
-    <div class="col-10">
-        <div class="row1">
+    <div class="col-10 right" style="background-color: white">
+        <div class="row1" style="margin: 10px">
             <iframe width="100%" height="600" src="https://youtube.com/embed/smejkfW1PQ8"></iframe>
         </div>
-        <div class="row1">
+        <div class="row1" style="margin: 10px">
             <h2>Nội dung – cốt truyện:</h2>
             <p style="font-size: 20px">
-                Kể về quá trình trưởng thành của một đứa trẻ trời sinh Chí Tôn cốt (đứa bé này tương lai có thể sánh vai
-                cùng hung Thái cổ được trời ưu ái, có thể chinh chiến với Chân Hống, Kim Sí Đại Bàng có huyết mạnh tinh
-                thuần đến hoàn mỹ, Nguyên thủy bảo thuật của nó sẽ danh chấn thiên hạ, được ghi khắc vào lịch sử của
-                Nhân tộc). Nhưng làm sao có thể dễ dàng đến vậy, chính vì chí tôn cốt của mình lại khiến hắn bị người
-                thân hãm hại, rút xương đổi cốt, trở thành phế nhân, phải lánh nạn ở một thôn sơn hẻo lánh. Hắn liên tục
-                gặp phải khó khăn trắc trở, mọi thứ không hay đều không ngừng giáng xuống, dường như lần nào cũng làm
-                hắn sống đi chết lại.
+                <i>Kể về quá trình trưởng thành của một đứa trẻ trời sinh Chí Tôn cốt (đứa bé này tương lai có thể sánh
+                    vai
+                    cùng hung Thái cổ được trời ưu ái, có thể chinh chiến với Chân Hống, Kim Sí Đại Bàng có huyết mạnh
+                    tinh
+                    thuần đến hoàn mỹ, Nguyên thủy bảo thuật của nó sẽ danh chấn thiên hạ, được ghi khắc vào lịch sử của
+                    Nhân tộc). Nhưng làm sao có thể dễ dàng đến vậy, chính vì chí tôn cốt của mình lại khiến hắn bị
+                    người
+                    thân hãm hại, rút xương đổi cốt, trở thành phế nhân, phải lánh nạn ở một thôn sơn hẻo lánh. Hắn liên
+                    tục
+                    gặp phải khó khăn trắc trở, mọi thứ không hay đều không ngừng giáng xuống, dường như lần nào cũng
+                    làm
+                    hắn sống đi chết lại.
 
-                Nhưng chính những lần chiến đấu vào sinh ra tử ấy đã tôi rèn bản lĩnh của hắn, giúp hắn giành được địa
-                vị, tiếng nói cho bản thân, đồng thời bảo vệ được quê hương thân hữu. Truyện ban đầu khá hài hước về cái
-                tính trẻ con của Thạch Hạo nhưng về sau lại quá bi đát, đạt tới cảnh giới nào thì gặp kẻ thù cảnh giới
-                lớn hơn săn giết, người thân anh em huyết tế để chiến đấu cùng. Những trích đoạn chiến đấu cực kỳ thảm
-                liệt, đọc mà cảm giác như muốn nhập tâm vào từng trận đánh luôn vậy.
+                    Nhưng chính những lần chiến đấu vào sinh ra tử ấy đã tôi rèn bản lĩnh của hắn, giúp hắn giành được
+                    địa
+                    vị, tiếng nói cho bản thân, đồng thời bảo vệ được quê hương thân hữu. Truyện ban đầu khá hài hước về
+                    cái
+                    tính trẻ con của Thạch Hạo nhưng về sau lại quá bi đát, đạt tới cảnh giới nào thì gặp kẻ thù cảnh
+                    giới
+                    lớn hơn săn giết, người thân anh em huyết tế để chiến đấu cùng. Những trích đoạn chiến đấu cực kỳ
+                    thảm
+                    liệt, đọc mà cảm giác như muốn nhập tâm vào từng trận đánh luôn vậy.</i>
             </p>
         </div>
     </div>
-
 </article>
-<footer>
-
+<footer class="row1" style="background-color: #f0f2f5;position: inherit;height: 50px;margin-top: 10px">
+    <div style="position: absolute;margin: 20px 40% ">
+        &copy; 2022 Thiết kế bởi Nguyễn Văn Phúc.
+    </div>
 </footer>
 </body>
 </html>

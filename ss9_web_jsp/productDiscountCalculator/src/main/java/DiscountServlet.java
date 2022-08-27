@@ -15,17 +15,17 @@ public class DiscountServlet extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String productDescription = request.getParameter("productDescription");
         double price = Double.parseDouble(request.getParameter("listPrice"));
-        double discount  = Double.parseDouble(request.getParameter("discountPercent"));
+        double discount = Double.parseDouble(request.getParameter("discountPercent"));
 
-        double amount = price * discount *0.01;
-         double discountPrice =price - amount;
+        double amount = price * discount * 0.01;
+        double discountPrice = price - amount;
 
-         RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
-         request.setAttribute("product",productDescription);
-         request.setAttribute("amount",amount);
-         request.setAttribute("discountPrice",discountPrice);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
+        request.setAttribute("product", productDescription);
+        request.setAttribute("amount", amount);
+        request.setAttribute("discountPrice", discountPrice);
 
-         requestDispatcher.forward(request,response);
+        requestDispatcher.forward(request, response);
 
 
     }

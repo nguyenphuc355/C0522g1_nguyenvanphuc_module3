@@ -22,8 +22,8 @@
                 <td><input name="fistOperand" placeholder="input"><br></td>
             </tr>
             <tr>
-                <td> <label>Operator</label></td>
-                <td> <select name="operator">
+                <td><label>Operator</label></td>
+                <td><select name="operator">
                     <option value="+">addition(+)</option>
                     <option value="-">subtraction(-)</option>
                     <option value="*">multiplication(*)</option>
@@ -33,11 +33,13 @@
             </tr>
             <tr>
                 <td><label>Second Operator: </label></td>
-                <td> <input name="secondOperand" placeholder="input"><br></td>
+                <td><input name="secondOperand" placeholder="input"><br></td>
             </tr>
             <tr>
                 <td></td>
-                <td><button type="submit">Result</button></td>
+                <td>
+                    <button type="submit">Result</button>
+                </td>
             </tr>
         </table>
     </fieldset>

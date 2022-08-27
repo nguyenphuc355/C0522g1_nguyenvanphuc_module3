@@ -10,7 +10,7 @@
 <head>
     <title>Input</title>
     <style>
-        body{
+        body {
             background-color: antiquewhite;
         }
     </style>

@@ -14,14 +14,14 @@ public class CustomerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Customer> customerList = new ArrayList<>();
-        customerList.add(new Customer("Huỳnh văn nam","10-11-1993","Quảng nam","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh6z3u_vHE8ko5AtKCaEdcP7OYKtpWrkogQ&usqp=CAU"));
-        customerList.add(new Customer("Huỳnh văn nam","10-11-1993","Quảng nam","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh6z3u_vHE8ko5AtKCaEdcP7OYKtpWrkogQ&usqp=CAU"));
-        customerList.add(new Customer("Huỳnh văn nam","10-11-1993","Quảng nam","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh6z3u_vHE8ko5AtKCaEdcP7OYKtpWrkogQ&usqp=CAU"));
-        customerList.add(new Customer("Huỳnh văn nam","10-11-1993","Quảng nam","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh6z3u_vHE8ko5AtKCaEdcP7OYKtpWrkogQ&usqp=CAU"));
+        customerList.add(new Customer("Huỳnh văn nam", "10-11-1993", "Quảng nam", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh6z3u_vHE8ko5AtKCaEdcP7OYKtpWrkogQ&usqp=CAU"));
+        customerList.add(new Customer("Huỳnh văn nam", "10-11-1993", "Quảng nam", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh6z3u_vHE8ko5AtKCaEdcP7OYKtpWrkogQ&usqp=CAU"));
+        customerList.add(new Customer("Huỳnh văn nam", "10-11-1993", "Quảng nam", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh6z3u_vHE8ko5AtKCaEdcP7OYKtpWrkogQ&usqp=CAU"));
+        customerList.add(new Customer("Huỳnh văn nam", "10-11-1993", "Quảng nam", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoh6z3u_vHE8ko5AtKCaEdcP7OYKtpWrkogQ&usqp=CAU"));
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/display.jsp");
-        request.setAttribute("customerList",customerList);
-        requestDispatcher.forward(request,response);
+        request.setAttribute("customerList", customerList);
+        requestDispatcher.forward(request, response);
     }
 
     @Override

@@ -5,23 +5,43 @@
     <title>Title</title>
     <link rel="stylesheet" href="mycss.css">
     <style>
-        .col-1 {width: 8.33%;}
-        .col-2 {width: 16.66%;}
-        .col-3 {width: 25%;}
-        .col-4 {width: 33.33%;}
-        .col-5 {width: 41.66%;}
-        .col-6 {width: 50%;}
-        .col-7 {width: 58.33%;}
-        .col-8 {width: 66.66%;}
-        .col-9 {width: 75%;}
-        .col-10 {width: 83.33%;}
-        .col-11 {width: 91.66%;}
-        .col-12 {width: 100%;}
+        @media only screen and (min-width:741px)and (max-width:1240px){
+
+            .col-m-4 {width: 33.33333%;}
+
+            .col-m-10 {width: 83.33333%;}
+
+            .col-m-12 {width: 100%;}
+        }
+        @media only screen and (max-width:740px ){
+
+            .col-s-12 {width: 100%;}
+            /*tăng kích thước font cho dễ đọc*/
+            li{
+                font-size: 40px;
+                text-align: center;
+                color: white;
+            }
+            p{
+                font-size: 35px;
+                color: white;
+            }
+            .title{
+                font-size: 55px;
+                color: white;
+            }
+        }
+        @media only screen and (min-width:1241px){
+            .col-l-2 {width: 16.66667%;}
+            .col-l-8 {width: 66.66667%;}
+            .
+        }
+
     </style>
 </head>
 <body>
 <div id="menu">
-    <div class="col-5">
+    <div>
     <ul>
         <li><a href="#">Logo</a>
             <ul>
@@ -36,11 +56,11 @@
         <li><a href="#">Home</a>
             <ul>
                 <li>
-                <li><a href="#">a</a></li>
-                <li><a href="#">a</a></li>
-                <li><a href="#">a</a></li>
-                <li><a href="#">a</a></li>
-                <li><a href="#">a</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
 
                 </li>
             </ul>
@@ -93,14 +113,9 @@
 </div>
 
 <div class="row">
-    <div class="col-2">
-        <ul style="list-style: none;color: blue">
-            <li>link</li>
-            <li>link</li>
-            <li>link</li>
-        </ul>
+    <div class="col-s-12 col-m-4 col-l-2 ">
     </div>
-    <div class="col-8">
+    <div class="col-s-12 col-m-10 col-l-8">
         <div>
             <h1>Wellcome</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -120,9 +135,11 @@ Lorem ipsum...
              </pre>
         </div>
     </div>
-    <div class="col-2">
+    <div class="col-s-12 col-m-12 col-l-2">
         <div class="row" style="background: #b7c4d7;border-radius: 5px;margin: 10px">
-            <p style="margin-left: 45%;height: 50px;margin-top: 40px">ADS</p>
+            <p style="margin-left: 45%;height: 50px;margin-top: 40px">
+                ADS
+            </p>
         </div>
         <div class="row" style="background: #b7c4d7;border-radius: 5px;margin: 10px">
           <p style="margin-left: 45%;height: 50px;margin-top: 40px">

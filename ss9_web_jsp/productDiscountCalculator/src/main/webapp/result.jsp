@@ -10,7 +10,7 @@
 <head>
     <title>Result</title>
     <style>
-        body{
+        body {
             background-color: antiquewhite;
         }
     </style>
